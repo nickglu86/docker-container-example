@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web: 
+    build: .
+    ports:
+      - "8080:0808"
+  db: 
+    image: "mysql"
+    environment:
+     MYSWQL_ROOT_PASSWORD: password
+    volumes:
+      - db-data:/foo
+
+volumes:
+ db-data:
